@@ -17,7 +17,7 @@ while True:
     soup = BeautifulSoup(response.text, "lxml")
 
 
-    if str(soup).find("ECONOMICS") == -1:
+    if str(soup).find("M.A PHILOSOPHY") == -1:
 
         time.sleep(3600)
 
@@ -28,15 +28,15 @@ while True:
 
         msg = 'Subject: Philosophy results are out!'
 
-        fromaddr = 'ADIT@FINEPOINTLABS.COM'
+        fromaddr = '<from email address>'
 
-        toaddrs = ['ADITGUPTA@GMAIL.COM', 'ADIT@FINEPOINTLABS.COM']
+        toaddrs = ['<email address>', '<another email address>']
 
         # setup the email server,
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
         # add my account login name and password,
-        server.login("ADIT@FINEPOINTLABS.COM", "PutYourOwnPassWordDude")
+        server.login("<from email address>", "PutYourOwnPassWordDude")
 
         # Print the email's contents
         print('From: ' + fromaddr)
